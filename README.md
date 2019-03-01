@@ -1,6 +1,6 @@
 # recursive array or object javascript
 
-## example src/iterate.js
+## example src/iterate.js for browser
 
 ~~~~
 let test = [{
