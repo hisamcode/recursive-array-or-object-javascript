@@ -2,6 +2,8 @@
 
 ## example nodejs
 
+#### npm i recursive-array-or-object
+
 ```
 const iterate = require('recursive-array-or-object');
 
