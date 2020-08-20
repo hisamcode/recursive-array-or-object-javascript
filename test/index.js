@@ -17,6 +17,6 @@ let test = [{
   },
 }, ];
 
-recursiveArrayObject(test, (key, values) => {
+recursiveArrayObject(test, (key, value, data) => {
   console.log(key);
 });

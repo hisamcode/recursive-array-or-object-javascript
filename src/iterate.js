@@ -3,8 +3,8 @@ function iterate(datas, callback) {
   if (isArrayOrObject(datas) != 3) {
     // array
     for (let key in datas) {
-      let data = datas[key];
-      isArrayOrObjectIterate(key, data, callback);
+      let val = datas[key];
+      isArrayOrObjectIterate(key, val, data, callback);
     }
   }
 }
@@ -19,9 +19,9 @@ function isArrayOrObject(data) {
   }
 }
 
-function isArrayOrObjectIterate(key, data, callback) {
-  callback(key, data);
-  if (isArrayOrObject(data) != 3) {
-    iterate(data, callback);
+function isArrayOrObjectIterate(key, val, data, callback) {
+  callback(key, val, data);
+  if (isArrayOrObject(val) != 3) {
+    iterate(val, callback);
   }
 }

@@ -24,11 +24,13 @@ let test = [{
   },
 }, ];
 
-iterate(test, (key, value) => {
-  if (key == 'id') {
-    console.log(key, value);
+iterate(test, (key, value, data) => {
+  if (key == 'name' && value == 'empat') {
+    data[key] = 'telepat';
   }
-  // console.log('key', key, 'value', data);
+  if (key == 'id') {
+    console.log(key, value, data);
+  }
 })
 
 ```
@@ -53,11 +55,13 @@ let test = [{
   },
 }, ];
 
-iterate(test, (key, value) => {
-  if (key == 'id') {
-    console.log(key, value);
+iterate(test, (key, value, data) => {
+  if (key == 'name' && value == 'empat') {
+    data[key] = 'telepat';
   }
-  // console.log('key', key, 'value', data);
+  if (key == 'id') {
+    console.log(key, value, data);
+  }
 });
 
 ```
