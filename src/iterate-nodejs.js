@@ -13,18 +13,18 @@ module.exports = (datas, callback) => {
     }
   }
 
-  module.isArrayOrObjectIterate = (key, data) => {
-    module.callback(key, data);
-    if (module.isArrayOrObject(data) != 3) {
-      module.iterate(data);
+  module.isArrayOrObjectIterate = (key, val, data) => {
+    module.callback(key, val, data);
+    if (module.isArrayOrObject(val) != 3) {
+      module.iterate(val);
     }
   }
 
   module.iterate = (datas) => {
     if (module.isArrayOrObject(datas) != 3) {
       for (let key in datas) {
-        let data = datas[key];
-        module.isArrayOrObjectIterate(key, data);
+        let val = datas[key];
+        module.isArrayOrObjectIterate(key, val, datas);
       }
     }
   }
